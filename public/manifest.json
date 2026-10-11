@@ -1,0 +1,62 @@
+{
+  "id": "/",
+  "name": "Promptora — Professional Teleprompter & Video Recorder",
+  "short_name": "Promptora",
+  "description": "Promptora: Professional Android teleprompter, CameraX video recorder, optical glass mirroring & speech reading studio. Created by Alakh.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["utilities", "productivity", "video", "multimedia"],
+  "icons": [
+    {
+      "src": "/promptora-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start Teleprompter",
+      "short_name": "Prompter",
+      "description": "Launch scrolling teleprompter immediately",
+      "url": "/?mode=prompter",
+      "icons": [{ "src": "/promptora-icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Record Video",
+      "short_name": "Record",
+      "description": "Record video with floating teleprompter",
+      "url": "/?mode=record",
+      "icons": [{ "src": "/promptora-icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Pocket Remote",
+      "short_name": "Remote",
+      "description": "Open pocket wireless remote controller",
+      "url": "/?mode=remote",
+      "icons": [{ "src": "/promptora-icon.svg", "sizes": "any" }]
+    }
+  ]
+}

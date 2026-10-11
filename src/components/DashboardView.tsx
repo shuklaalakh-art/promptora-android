@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Script, VideoRecording, PrompterSettings, ActiveScreen } from '../types/teleprompter';
 import { PromptoraLogo, PromptoraIcon } from './PromptoraLogo';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface DashboardViewProps {
   scripts: Script[];
@@ -68,15 +69,18 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </p>
         </div>
 
-        {/* Quick Remote Link */}
-        <button
-          onClick={() => onNavigate('remote-setup')}
-          className="self-start md:self-auto flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-white/10 hover:border-cyan-500/50 text-xs font-medium text-slate-200 transition-colors shadow-sm"
-        >
-          <Gamepad2 className="w-4 h-4 text-cyan-400" />
-          <span>Bluetooth & Remote Setup</span>
-          <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
-        </button>
+        {/* Actions: Install App & Remote Setup */}
+        <div className="flex items-center gap-2 self-start md:self-auto">
+          <PWAInstallButton />
+          <button
+            onClick={() => onNavigate('remote-setup')}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-white/10 hover:border-cyan-500/50 text-xs font-medium text-slate-200 transition-colors shadow-sm"
+          >
+            <Gamepad2 className="w-4 h-4 text-cyan-400" />
+            <span>Bluetooth & Remote</span>
+            <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+          </button>
+        </div>
       </div>
 
       {/* Prominent Quick-Start Hero Card */}
