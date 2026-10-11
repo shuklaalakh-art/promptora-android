@@ -1,0 +1,10 @@
+{
+  "name": "Android Teleprompter Pro",
+  "description": "Professional Android teleprompter with adjustable smooth scrolling speed, typography controls, optical glass mirroring, camera overlay, and real-time remote mirroring.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

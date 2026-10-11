@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Promptora</string>
+    <string name="app_tagline">Read Naturally. Record Confidently.</string>
+    <string name="created_by">Created by Alakh</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_prompter">Teleprompter</string>
+    <string name="nav_record">Record Video</string>
+    <string name="nav_external">External Display</string>
+</resources>

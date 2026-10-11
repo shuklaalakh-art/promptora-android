@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Outer Glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4c1d95" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#1e0b36" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glass Squircle Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#311059" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#1a0b36" stop-opacity="0.98"/>
+      <stop offset="100%" stop-color="#0c051d" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Glass Rim Border Highlight -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.8"/>
+      <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#e879f9" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Letter P Gloss Gradient -->
+    <linearGradient id="pBodyGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f8fafc"/>
+      <stop offset="75%" stop-color="#c7d2fe"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <!-- Letter P Bottom Stem Fold Shade -->
+    <linearGradient id="stemFold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Camera Nozzle Gradient -->
+    <linearGradient id="cameraNozzle" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- Recording Dot Radial Glow -->
+    <radialGradient id="recGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="70%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </radialGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="pShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <filter id="recShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#ef4444" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Icon -->
+  <rect x="0" y="0" width="512" height="512" fill="url(#bgGlow)"/>
+
+  <!-- Rounded Squircle Glass Tile -->
+  <rect x="56" y="56" width="400" height="400" rx="96" ry="96" fill="url(#glassGrad)"/>
+  
+  <!-- Glass Tile Rim Stroke -->
+  <rect x="56" y="56" width="400" height="400" rx="96" ry="96" fill="none" stroke="url(#rimGrad)" stroke-width="4.5"/>
+
+  <!-- Top Glass Sheen -->
+  <path d="M 120 72 Q 256 56 392 72 Q 440 120 440 220 C 350 200 240 220 120 280 C 72 200 72 130 120 72 Z" fill="#ffffff" opacity="0.05"/>
+
+  <!-- Camera Triangle Nozzle on Right Side of P -->
+  <polygon points="340,165 385,130 385,230 340,195" fill="url(#cameraNozzle)" filter="url(#pShadow)"/>
+
+  <!-- Stylized Letter "P" Body with Teleprompter Bowl -->
+  <g filter="url(#pShadow)">
+    <!-- Outer Curved P Path -->
+    <path d="M 190 115
+             L 285 115
+             C 345 115 365 155 365 200
+             C 365 245 340 280 280 280
+             L 235 280
+             C 215 280 195 295 190 320
+             L 175 385
+             C 170 405 150 410 135 395
+             C 120 380 125 355 130 330
+             L 165 160
+             C 170 130 180 115 190 115 Z"
+          fill="url(#pBodyGrad)"/>
+
+    <!-- Bottom Left 3D Ribbon Fold (Cyan/Blue shadow) -->
+    <path d="M 130 330
+             C 125 355 120 380 135 395
+             C 150 410 170 405 175 385
+             L 190 320
+             C 195 295 215 280 235 280
+             L 185 280
+             C 155 280 135 305 130 330 Z"
+          fill="url(#stemFold)"/>
+
+    <!-- Inner Cutout Bowl of P -->
+    <path d="M 215 160
+             L 270 160
+             C 305 160 315 180 315 200
+             C 315 220 300 238 270 238
+             L 215 238
+             Z"
+          fill="#130829"/>
+
+    <!-- Three Glowing Horizontal Prompter Speech Lines inside Bowl -->
+    <!-- Line 1 -->
+    <rect x="228" y="174" width="60" height="9" rx="4.5" fill="#38bdf8"/>
+    <!-- Line 2 -->
+    <rect x="228" y="193" width="76" height="9" rx="4.5" fill="#38bdf8"/>
+    <!-- Line 3 -->
+    <rect x="228" y="212" width="48" height="9" rx="4.5" fill="#38bdf8"/>
+  </g>
+
+  <!-- Glowing Red Camera Recording Indicator Button with White Ring -->
+  <g filter="url(#recShadow)">
+    <!-- Outer White Ring -->
+    <circle cx="330" cy="335" r="38" fill="none" stroke="#ffffff" stroke-width="6"/>
+    <!-- Inner Glowing Red Dot -->
+    <circle cx="330" cy="335" r="26" fill="url(#recGlow)"/>
+  </g>
+</svg>
